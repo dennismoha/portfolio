@@ -38,11 +38,11 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-// module.exports = app;
+module.exports = app;
 
-app.listen(process.env.PORT || 3000, (Error) => {
-    if (Error) {
-        throw new Error('server starting error ', Error)
-    }
-    console.log('server started successfully')
-})
+// app.listen(process.env.PORT || 3000,(Error)=> {
+//   if(Error) {
+//     throw new Error('server starting error ',Error)
+//   }
+//   console.log('server started successfully')
+// })
