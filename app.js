@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// const csurf = require('csurf')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -38,11 +39,11 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-module.exports = app;
+// module.exports = app;
 
-// app.listen(process.env.PORT || 3000,(Error)=> {
-//   if(Error) {
-//     throw new Error('server starting error ',Error)
-//   }
-//   console.log('server started successfully')
-// })
+app.listen(process.env.PORT || 3000, (Error) => {
+    if (Error) {
+        throw new Error('server starting error ', Error)
+    }
+    console.log('server started successfully')
+})
